@@ -5,14 +5,8 @@ exports.create = (publicationData) => Publication.create(publicationData);
 
 exports.getOneById = (publicationId) => Publication.findById(publicationId);
 
-exports.update = (publicationId, { title, paintingTechnique, artPicture, certificate }) => {
+exports.update = (publicationId, newData) => Publication.findByIdAndUpdate(publicationId, newData, { runValidators: true });
 
-    if (!title || !paintingTechnique || !artPicture || !certificate) {
-        throw new Error('All fileds are required!');
-    }
-
-    return Publication.findByIdAndUpdate(publicationId, { title, paintingTechnique, artPicture, certificate });
-}
 
 exports.deleteById = (publicationId) => Publication.findByIdAndDelete(publicationId);
 

@@ -17,8 +17,9 @@ const publicationSchema = new mongoose.Schema({
         validate: [/^https?:\/\//i, 'Image URL should start with http/https!'],
     },
     certificate: {
+        type: String,
         enum: ['Yes', 'No'],
-        required: [true, 'Certificate is required!'],
+        required: true,
     },
     author: {
         type: mongoose.Types.ObjectId,

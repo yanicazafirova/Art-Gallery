@@ -19,7 +19,7 @@ app.use('/static', express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-//app.use(auth);
+app.use(auth);
 
 app.use(routes);
 

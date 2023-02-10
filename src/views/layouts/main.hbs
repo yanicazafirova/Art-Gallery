@@ -15,10 +15,11 @@
 
         <!-- In case of error, you should display div with class "error-box" -->
         <!-- You can choose to display the first error or all of them (error message/s in your opinion) -->
-        <!--<div class="error-box">
-            <p>Error</p>
-        </div>-->
-
+        {{#if error}}
+        <div class="error-box">
+            <p>{{error}}</p>
+        </div>
+        {{/if}}
         <nav>
 
             <!-- Do not forget to change the path to the image -->
@@ -30,10 +31,10 @@
                 <!-- Logged users -->
                 <li><a href="#">Create Publication</a></li>
                 <li><a href="#">Profile</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
                 <!-- Guest users -->
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="/auth/login">Login</a></li>
+                <li><a href="/auth/register">Register</a></li>
             </ul>
 
         </nav>

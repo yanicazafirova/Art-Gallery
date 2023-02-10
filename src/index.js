@@ -5,7 +5,7 @@ const { PORT } = require('./constants');
 
 const { hbsConfig } = require('./config/handlebars');
 const { databaseInit } = require('./config/database');
-//const { auth } = require('./middlewares/authMiddleware');
+const { auth } = require('./middlewares/authMiddleware');
 
 const routes = require('./routes');
 

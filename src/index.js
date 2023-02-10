@@ -5,7 +5,7 @@ const { PORT } = require('./constants');
 
 const { hbsConfig } = require('./config/handlebars');
 const { databaseInit } = require('./config/database');
-const { auth } = require('./middlewares/authMiddleware');
+//const { auth } = require('./middlewares/authMiddleware');
 
 const routes = require('./routes');
 
@@ -19,7 +19,7 @@ app.use('/static', express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(auth);
+//app.use(auth);
 
 app.use(routes);
 
